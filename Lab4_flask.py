@@ -25,7 +25,7 @@ model = pickle.load(open('lab4_model.pkl','rb'))
 def main():
     return(render_template('main.html'))
 
-@app.route('/Predict',method = ['POST'])
+@app.route('/Predict',methods = ['POST'])
 def predict():
     init_features = [float(x) for x in reequest.form.values()]
     final = np.array(init_features)
