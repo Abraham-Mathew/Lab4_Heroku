@@ -19,7 +19,7 @@ import pandas as pd
 from flask import Flask, request, jsonify, render_template
 
 app = flask.Flask(__name__)
-model = pickle.load(open('lab4_model.pkl','rb')
+model = pickle.load(open('lab4_model.pkl','rb'))
 
 @app.route('/')
 def main():
