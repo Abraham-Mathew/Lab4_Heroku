@@ -11,15 +11,15 @@
 
 # In[10]:
 
-
-import flask
 import pickle
 import numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
-model = pickle.load(open('lab4_model.pkl','rb'))
+
+pickle_in = open("lab4_model.pkl","rb")
+model = pickle.load(pickle_in)
 
 @app.route('/')
 def main():
