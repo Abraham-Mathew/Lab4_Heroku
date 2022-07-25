@@ -27,12 +27,11 @@ def main():
 
 @app.route('/Predict',methods = ['POST'])
 def predict():
-    #init_features = [float(x) for x in reequest.form.values()]
-    #final = np.array(init_features)
-    #prediction = model.predict(final)
-    #return render_template('main.html', prediction_text = 'The fish belongs to the Species {}'.format(str(prediction)))
-    return render_template('main.html', prediction_text = 'The fish belongs to the Species Bream')
-
+    init_features = [float(x) for x in reequest.form.values()]
+    final = np.array(init_features)
+    prediction = model.predict(final)
+    return render_template('main.html', prediction_text = 'The fish belongs to the Species {}'.format(str(prediction)))
+    
 if __name__=='__main__':
     app.run()
 
