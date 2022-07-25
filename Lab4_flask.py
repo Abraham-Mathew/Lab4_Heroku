@@ -31,7 +31,7 @@ def predict():
     #final = np.array(init_features)
     #prediction = model.predict(final)
     #return render_template('main.html', prediction_text = 'The fish belongs to the Species {}'.format(str(prediction)))
-    return render_template('main.html', prediction_text = 'The fish belongs to the Species Bream)))
+    return render_template('main.html', prediction_text = 'The fish belongs to the Species Bream)
 
 if __name__=='__main__':
     app.run()
